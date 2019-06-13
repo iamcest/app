@@ -668,7 +668,7 @@
                 </card>
             </div>
             <hr id="vt">
-            <h3 col="1/1">Ventricular tachycardia</h3>
+            <h3 col="1/1">Taquicardia Ventricular</h3>
 
             <ul col="1/1">
                 <li>هي تسارع لنبضات القلب مصدرها أحد البطينين. هذا التسارع خطير حيث انه قد يتطور إلى رجفان بطيني
@@ -689,98 +689,40 @@
 
             <div txt="c" col="1/1">
                 <card>
-                    <img src="images/vt.jpg">
+                    <img src="images/Taquicardia-Ventricula.jpg">
                 </card>
             </div>
             <hr id="vf">
-            <h3 col="1/1">Ventricular fibrillation</h3>
+            <h3 col="1/1">Fibrilación Ventricular</h3>
 
             <ul col="1/1">
-                <li>الرجفان البطيني هو اضطراب كهربائي يحصل في البطينين. يتوقف القلب عن الخفقان و عوضا عن ذلك يرجف بصورة
-                    عشوائية. </li>
-                <li>لا يمكن مشاهدة اي <code>QRS</code> في التخطيط. </li>
-                <li>استخدام الصاعق الكهربي واجب Cardiac defibrillator لارجاع النظم الطبيعي للقلب. </li>
+                <li>Trastorno electrico que ocurre en los ventrículos. El corazón deja de latir de manera efectiva. Paro Cardíaco. </li>
+                <li>Desaparece el complejo <code>QRS</code> en el registro. </li>
+                <li>Desfibrilar [Choque eléctrico] con un CardioDesfibrilador es la unica forma de sacar o salir de este ritmo cardíaco</li>
             </ul>
 
             <div txt="c" col="1/1">
                 <card>
-                    <img src="images/vf.jpg">
+                    <img src="images/Fibrilación-Ventricular.jpg">
                 </card>
             </div>
             </div>
         </grid>
     </section>
-
-    <footer id="footer">
+    <div><img src="images/Telemedicina.png" width="100%" alt="ECG Básico App" /></div>
+    <footer id="abajo">
         <grid>
             <div col="1/1" fs="xs" txt="c">
-                <p style="margin-bottom: 0rem;">للاسئلة و الاستفسارات</p>
-                <p style="margin-bottom: 1rem;">contact@ecg.tips</p>
-                <div><a href="https://twitter.com/ajmandourah?ref_src=twsrc%5Etfw" class="twitter-follow-button"
-                        data-show-count="false">Follow @ajmandourah</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
+                <p style="margin-bottom: 0rem;">Consultas</p>
+                <p style="margin-bottom: 1rem;">correo.iamcest@gmail.com</p>
+                <p style="margin-bottom: 1rem;"><a hregf="https://www.iamcest.com">www.iamcest.com</a></p>
             </div>
 
             <div txt="c" col="1/1">
                 <p xx fs="xs" class="copyright" style="margin-bottom: 0rem;"></p>
-                <p fs="xs">Anmar Mandourah : ECG.tips</p>
+                <p fs="xs">Dr Alejandro Sergio D´Alessandro : ECG Básico App | IAMCEST | Soluciones</p>
             </div>
         </grid>
     </footer>
-
-    <!-- scripts -->
-    <script>
-        $(document).ready(function () {
-            /*
-            var template
-            tippy('.popup', {
-                    content: template,
-                    arrow: true,
-                    delay: 100,
-                    size: "large",
-                    trigger: 'click',
-                    theme: 'light-border'
-                    });
-            $('.popup').click(function(){
-                template = '<div id="popupcard"><img src="' + $(this).attr("image") + '" id="popimg"></div>';
-                this._tippy.setContent(template);
-            });
-            */
-
-            // $('.box').magnificPopup({
-            //     type: 'image',
-            //     mainClass: 'mfp-with-zoom',
-            //     zoom: {
-            //         enabled: true, // By default it's false, so don't forget to enable it
-
-            //         duration: 300, // duration of the effect, in milliseconds
-            //         easing: 'ease-in-out', // CSS transition easing function
-            //         opener: function (openerElement) {
-            //             return openerElement.is('img') ? openerElement : openerElement.find('img');
-            //         }
-            //     }
-
-            // });
-
-
-            var d = new Date();
-            $('.copyright').html(" جميع الحقوق محفوظة " + d.getFullYear() + "©");
-
-            //hide tweet button
-            if ($(window).width() < 770) {
-                $('#tweet').hide();
-            }
-            else {
-                $('#tweet').show();
-            }
-
-        });
-
-    //ToDo: AnchorScroll, jsPDF
-
-    </script>
-
 </body>
-
 </html>
