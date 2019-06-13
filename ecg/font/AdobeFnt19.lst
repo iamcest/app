@@ -1,0 +1,52 @@
+%!Adobe-FontList 1.19
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\Users\ajman\Desktop\ecg\Font\JF-Flat-regular.eot
+FileModTime:1439225819
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\Users\ajman\Desktop\ecg\Font\JF-Flat-regular.svg
+FileModTime:1439225819
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JFFlat-Regular
+FamilyName:JF Flat
+StyleName:Regular
+FullName:JF Flat Regular
+MenuName:JF Flat
+StyleBits:0
+FamilyNameNative:JF Flat
+StyleNameNative:Regular
+FullNameNative:JF Flat Regular
+WritingScript:Arabic
+OutlineFileName:C:\Users\ajman\Desktop\ecg\Font\JF-Flat-regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:45960
+FileModTime:1439225819
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,JF Flat Regular
+NameArray:0,Mac,4,JF Flat Regular
+NameArray:0,Win,1,JF Flat
+NameArray:0,Win,16,JF Flat
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\Users\ajman\Desktop\ecg\Font\JF-Flat-regular.woff
+FileModTime:1439225819
+%EndFont
+
