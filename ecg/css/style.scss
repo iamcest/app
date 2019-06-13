@@ -1,0 +1,121 @@
+html {
+    scroll-behavior: smooth;
+}
+body{ 
+    margin: 0 auto;
+}
+@font-face {
+    font-family: "Flat";
+    src: url('font/JF-Flat-regular.eot');
+    src: url('font/JF-Flat-regular.eot?#iefix') format('embedded-opentype'),
+    url('font/JF-Flat-regular.svg#JF Flat Regular') format('svg'),
+    url('font/JF-Flat-regular.woff') format('woff'),
+    url('font/JF-Flat-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+h3{
+    color: rgb(62, 21, 139);
+    font-family: 'Flat';
+    font-weight: bold;
+    text-align: center;
+}
+.menu{
+    font-weight: bold;
+}
+ul, li{
+    font-family: 'Tajawal';
+}
+.main{
+    //background-color:  #F9F6FB;
+    background-image: linear-gradient(to right, rgb(19, 13, 53) , rgb(35, 40, 117));
+    background-image: -webkit-linear-gradient(to right, rgb(19, 13, 53) , rgb(35, 40, 117));
+    background-image: -moz-linear-gradient(to right, rgb(19, 13, 53) , rgb(35, 40, 117));
+    height: 100vh;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+}
+.main img{
+}
+.main-content{
+    // margin: 1rem;
+}
+.start-btn{
+    position: relative;
+    /*background-color: white;*/
+    width: 15rem;
+    height: 5rem;
+    margin: 0 auto;
+    border: 2px solid white;
+}
+.start-btn::after{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: white;
+    transform: scale(1.5) rotate(-10deg);
+    opacity:0;
+    transition: all 0.3 cubic-bezier(0.81,-1.18, 0.18, 2.59);
+}
+.start-btn:hover::after{
+    opacity:0.1;
+    transform: scale(1) rotate(0deg);
+
+}
+.btn{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 3.1rem;
+    text-decoration: none;
+    font-family: 'Tajawal';
+    color: white;
+    z-index: 1;
+
+}
+#start:hover{
+    top: -2px;
+    box-shadow: 0px 7px grey;
+}
+#start:active{
+    top:6px;
+    box-shadow: 0px 0px;
+}
+#id{
+    height: 1px;
+    color: #fff;
+}
+.logo{
+    animation: beat 1s cubic-bezier(1,-0.48, 0.65, 2.83) infinite alternate;
+}
+@keyframes beat{
+    to {transform: scale(0.9,0.9)};
+}
+/* svg animation */
+@keyframes play300 {
+0% {
+    background-position: 0px 0px;
+}
+100% {
+    background-position: -25500px 0px;
+}
+}
+.shapeshifter {
+animation-duration: 5000ms;
+animation-timing-function: steps(300);
+animation-iteration-count: infinite;
+width: 85px;
+height: 64px;
+background-repeat: no-repeat;
+margin: auto;
+margin-bottom: 1rem;
+
+}
+.shapeshifter.play {
+animation-name: play300;
+}

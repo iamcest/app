@@ -1,0 +1,161 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "Flat";
+  src: url("font/JF-Flat-regular.eot");
+  src: url("font/JF-Flat-regular.eot?#iefix") format("embedded-opentype"), url("font/JF-Flat-regular.svg#JF Flat Regular") format("svg"), url("font/JF-Flat-regular.woff") format("woff"), url("font/JF-Flat-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h3 {
+  color: #3e158b;
+  font-family: 'Flat';
+  font-weight: bold;
+  text-align: center;
+}
+
+.menu {
+  font-weight: bold;
+}
+
+ul, li {
+  font-family: 'Tajawal';
+}
+
+.main {
+  background-image: -webkit-gradient(linear, left top, right top, from(#130d35), to(#232875));
+  background-image: linear-gradient(to right, #130d35, #232875);
+  background-image: -moz-linear-gradient(to right, #130d35, #232875);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.start-btn {
+  position: relative;
+  /*background-color: white;*/
+  width: 15rem;
+  height: 5rem;
+  margin: 0 auto;
+  border: 2px solid white;
+}
+
+.start-btn::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: white;
+  -webkit-transform: scale(1.5) rotate(-10deg);
+          transform: scale(1.5) rotate(-10deg);
+  opacity: 0;
+  -webkit-transition: all 0.3 cubic-bezier(0.81, -1.18, 0.18, 2.59);
+  transition: all 0.3 cubic-bezier(0.81, -1.18, 0.18, 2.59);
+}
+
+.start-btn:hover::after {
+  opacity: 0.1;
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+}
+
+.btn {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 3.1rem;
+  text-decoration: none;
+  font-family: 'Tajawal';
+  color: white;
+  z-index: 1;
+}
+
+#start:hover {
+  top: -2px;
+  -webkit-box-shadow: 0px 7px grey;
+          box-shadow: 0px 7px grey;
+}
+
+#start:active {
+  top: 6px;
+  -webkit-box-shadow: 0px 0px;
+          box-shadow: 0px 0px;
+}
+
+#id {
+  height: 1px;
+  color: #fff;
+}
+
+.logo {
+  -webkit-animation: beat 1s cubic-bezier(1, -0.48, 0.65, 2.83) infinite alternate;
+          animation: beat 1s cubic-bezier(1, -0.48, 0.65, 2.83) infinite alternate;
+}
+
+@-webkit-keyframes beat {
+  to {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+  }
+}
+
+@keyframes beat {
+  to {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+  }
+}
+
+/* svg animation */
+@-webkit-keyframes play300 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -25500px 0px;
+  }
+}
+@keyframes play300 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -25500px 0px;
+  }
+}
+
+.shapeshifter {
+  -webkit-animation-duration: 5000ms;
+          animation-duration: 5000ms;
+  -webkit-animation-timing-function: steps(300);
+          animation-timing-function: steps(300);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  width: 85px;
+  height: 64px;
+  background-repeat: no-repeat;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.shapeshifter.play {
+  -webkit-animation-name: play300;
+          animation-name: play300;
+}
+/*# sourceMappingURL=style.css.map */
