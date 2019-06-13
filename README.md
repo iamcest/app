@@ -4,7 +4,7 @@ Repositorio de Aplicaciones de utilidad en contextos de:
 - Prevención Secundaria
 - IAMCEST
 - IAMSEST
-- SCA
+- <a href=“https://app.iamcest.com/pro/sca/“>SCA</a>
 - FA
 - SÍNCOPE
 
