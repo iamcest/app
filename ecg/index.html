@@ -8,16 +8,30 @@
     <meta name="image" content="https://app.iamcest.com/ecg/images/logo.png" />
     <meta property="og:image" content="https://app.iamcest.com/ecg/images/logo.png">
     <meta property="twitter:image" content="https://app.iamcest.com/ecg/images/logo.png">
+    <link href="less/bare.less" rel="stylesheet/less" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Tajawal:500" rel="stylesheet">
-    <link href=´css/style.css' rel='stylesheet' type='text/css'>
-    <link rel='icon' type='image/png'  href='icons/icon.png'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png"  href="icons/icon.png">
+    <style>
+        @font-face {
+            font-family: "Flat";
+            src: url('/font/JF-Flat-regular.eot');
+            src: url('/font/JF-Flat-regular.eot?#iefix') format('embedded-opentype'),
+            url('/font/JF-Flat-regular.svg#JF Flat Regular') format('svg'),
+            url('/font/JF-Flat-regular.woff') format('woff'),
+            url('/font/JF-Flat-regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+         }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 </head>
 <body>
     <div class="main">
         <div xx txt="c" class="main-content">
             <div class="shapeshifter play" style="background-image: url(sprite_60fps.svg)"></div>
+            <img class="logo" src="images/logobw.png">
             <h1 style="color: #fff; font-family: sans-serif; font-size: 6em;"><span style="font-weight:100;">ECG </span><b>Básico</b></h1>
             <h1 style="color: #fff">Guía de interpretación ECG</h1>
             <p fs="l" style="color: #fff ">Dedicados a simplificar conceptos básicos en un lenguaje sencillo y claro</p>
@@ -30,7 +44,9 @@
         <label>
             <input type="checkbox">
             <header>
+
             </header>
+
             <ul>
                 <li>
                     <a xx class="menu"><b>Lista de Contenidos</b></a>
@@ -59,18 +75,22 @@
                         <menuitem><a href="#vf">Ventricular flutter</a></menuitem>
                     </menu>
                 </li>
-                <li xx class="menu"><a href="#footer">Contacto</a></li>
+                <li xx class="menu"><a href="#footer">الاستفسارات</a></li>
                 <li xx class="menu"><a href="https://app.iamcest.com/ecg/acerca.html">Acerca de</a></li>
-         </ul>
+                <li id="tweet"><div style=" position: absolute; top: -1.5rem; ">
+                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>                            </div></li>
+                        -->
+            </ul>
         </label>
     </nav>
     <br>
+
     <section>
         <grid>
 
             <div>
                 <hr style="margin-top: -2px" id="partes">
-                <h3 txt="c" mt="8" col="1/1">Partes</h3>
+                <h3 txt="c" mt="8" col="1/1">أPartes</h3>
 
                 <ul col="2/3">
                     <li>Velocidad de registro de un ECG: 25mm por segundo (Uso generalizado). También se puede registrar a 50 mm por seg. </li>
