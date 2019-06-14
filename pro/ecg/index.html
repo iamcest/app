@@ -1,0 +1,714 @@
+<!doctype HTML>
+<html lang="es">
+<head>
+    <title>ECG Básico App</title>
+    <meta charset=utf-8>
+    <meta name="description" content="Contenidos de Electrocardiografía [ECG] Básica para todos los Profesionales de la Salud" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="image" content="https://app.iamcest.com/pro/ecg/images/logo.png" />
+    <meta property="og:image" content="https://app.iamcest.com/pro/ecg/images/logo.png">
+    <meta property="twitter:image" content="https://app.iamcest.com/pro/ecg/images/logo.png">
+    <link href="less/bare.less" rel="stylesheet/less" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal:500" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png"  href="icons/icon.png">
+    <style>
+        @font-face {
+            font-family: "Flat";
+            src: url('/font/JF-Flat-regular.eot');
+            src: url('/font/JF-Flat-regular.eot?#iefix') format('embedded-opentype'),
+            url('/font/JF-Flat-regular.svg#JF Flat Regular') format('svg'),
+            url('/font/JF-Flat-regular.woff') format('woff'),
+            url('/font/JF-Flat-regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+         }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div xx txt="c" class="main-content">
+            <div class="shapeshifter play" style="background-image: url(sprite_60fps.svg)" /></div>
+            <img class="logo" src="images/logobw.png" />
+            <h1 style="color: #fff; font-family: sans-serif; font-size: 6em;"><span style="font-weight:100;">ECG </span><b>Básico</b></h1>
+            <h1 style="color: #fff">Guía de interpretación ECG</h1>
+            <p fs="l" style="color: #fff ">Dedicados a simplificar conceptos básicos en un lenguaje sencillo y claro</p>
+            <div class="start-btn">
+                 <a href="#partes" class="btn" fs="xl">Comenzar Aquí</a>
+            </div>
+        </div>
+    </div>
+    <nav fx>
+        <label>
+            <input type="checkbox">
+            <header>
+
+            </header>
+
+            <ul>
+                <li>
+                    <a xx class="menu"><b>Lista de Contenidos</b></a>
+                    <menu>
+                        <menuitem><a href="#partes">Partes</a></menuitem>
+                        <menuitem><a href="#mediciones">Mediciones</a></menuitem>
+                        <menuitem><a href="#basics">أساسيات كهربائية القلب</a></menuitem>
+                        <menuitem><a href="#bbb">Bundle branch block</a></menuitem>
+                        <menuitem><a href="#stemi">STEMI</a></menuitem>
+                        <menuitem><a href="#winter">De Winter's T wave</a></menuitem>
+                        <menuitem><a href="#wellen">Wellen sign</a></menuitem>
+                        <menuitem><a href="#sgarbossa">قاعدة سكاربوسا</a></menuitem>
+                        <menuitem><a href="#nstemi">NSTEMI</a></menuitem>
+                        <menuitem><a href="#pericarditis">Pericarditis</a></menuitem>
+                        <menuitem><a href="#myocarditis">Myocarditis</a></menuitem>
+                        <menuitem><a href="#afib">Atrial Fibrillation</a></menuitem>
+                        <menuitem><a href="#aflutt">Atrial Flutter</a></menuitem>
+                        <menuitem><a href="#sinus">Sinus tachycardia</a></menuitem>
+                        <menuitem><a href="#atrial">Atrial tachycardia</a></menuitem>
+                        <menuitem><a href="#avnrt">AVNRT</a></menuitem>
+                        <menuitem><a href="#junctional">Junctional rhythm</a></menuitem>
+                        <menuitem><a href="#ventricular">Ventricular rhythm</a></menuitem>
+                        <menuitem><a href="#psvc">PSVC</a></menuitem>
+                        <menuitem><a href="#pvc">PVC</a></menuitem>
+                        <menuitem><a href="#vt">Ventricular tachycardia</a></menuitem>
+                        <menuitem><a href="#vf">Ventricular flutter</a></menuitem>
+                    </menu>
+                </li>
+                <li xx class="menu"><a href="#footer">Contacto</a></li>
+                <li xx class="menu"><a href="https://app.iamcest.com/pro/ecg/acerca.html">Acerca de</a></li>
+            </ul>
+        </label>
+    </nav>
+    <br>
+
+    <section>
+        <grid>
+
+            <div>
+                <hr style="margin-top: -2px" id="partes">
+                <h3 txt="c" mt="8" col="1/1">أPartes</h3>
+
+                <ul col="2/3">
+                    <li>Velocidad de registro de un ECG: 25mm por segundo (Uso generalizado). También se puede registrar a 50 mm por seg. </li>
+                    <li>Ondas básicas en el trazado <code xx image="images/pqrst.jpg">P,Q,R,S,T</code>
+                        En un registro ECG normal, se podrá visualizar con claridad, cada una de ellas.</li>
+                    <li>Onda <code xx image="images/p.jpg">P</code> se registra cuando se produce la despolarización de las Aurículas. Habitualmente es Positiva enb todas las derivaciones [Eje de la Onda P +60°] excepto en <code>V1</code></li>
+                    <li>Complejo <code xx image="images/qrs.jpg">QRS</code> representa el registro eléctrico de la Despolarización de ambos Ventrículos. En el ECG normal no supera los 120 milisegundos. Recordar siempre que en el complejo QRS, la primer onda negativa se llama <code xx image="images/q.jpg">Q</code>, la primer onda positiva se llama <code xx image="images/r.jpg">R</code> segunda onda negativa es <code xx
+                            image="images/s.jpg">S</code> Si luego de la onda <code xx
+                            image="images/p.jpg">P</code> no se continúa con una onda positiva <code xx image="images/r.jpg">R</code> y es negativa, se denomina <code xx image="images/s.jpg">S</code> es negativa </li>
+                    <li>La onda <code xx image="images/t.jpg">T</code> acompaña el complejo QRS y representa la <code>Repolarización ventricular</code>
+                        habitualmente es una onda positiva.</li>
+                    <li>Los electrodos se ubican en el cuerpo según el principio del triángulo de Eintohven. El corazón es visualizado por lo tanto de multiples modos. En la tabla de abajo resumen del conjunto de electrodos y la sección que representa.
+</li>
+                </ul>
+                <div col="1/3">
+                    <card txt="c">
+                        <a xx class="box" href="images/pqrst.jpg"><img src="images/pqrst.jpg"></a>
+                        <p>Intervalos</p>
+                    </card>
+
+                </div>
+                <div col="1/1">
+                    <table>
+                        <tr txt="c">
+                            <th>Electrodos</th>
+                            <th>Cara que visualiza</th>
+                        </tr>
+                        <tr txt="c">
+                            <td><code>II, III, AVF</code></td>
+                            <td>Inferior</td>
+                        </tr>
+                        <tr txt="c">
+                            <td><code>I, aVL, V5, V6</code></td>
+                            <td>Lateral</td>
+                        </tr>
+                        <tr txt="c">
+                            <td><code>V3, V4</code></td>
+                            <td>Anterior</td>
+                        </tr>
+                        <tr txt="c">
+                            <td><code>V1, V2</code></td>
+                            <td>Septal</td>
+                        </tr>
+                    </table>
+                </div>
+                <hr id="medidas">
+
+                <h3 col="1/1">Intervalos</h3>
+
+
+
+                <ul pa="2" col="2/3">
+                    <li>El primer intervalo se denomina <code xx image="images/pq.jpg">PQ</code> su medida máxima normal es de 200 milisegundos. Si se prolonga Bloqueo AV de primer grado.</li>
+                    <li>El complejo <code>QRS</code> no debe excederse de los 120 milisegundos. En caso de superar esos valores estamos en presencia de bloqueos de RAMA [BCRI Bloqueo completo de Rama Izquierda - BCRD Bloqueo completo de Rama Derecha].</li>
+                    <li>Intervalo <code>QT</code> se prolonga desde es inicio de la Onda Q hasta el final de la Onda T habitualmente no supera los 440 milisegundos <code>QTc</code> se utiliza para medir y corregir la duración del intervalo.</li>
+                    <li>Intervalo <code>RR</code> representa la distancia entre 2 despolarizaciones <code>QRS</code> útil para medir la frecuencia cardíaca. Tener en cuenta que la distancia entre <code>RR</code> sea siempre igual. En caso de irregularidad podría tratarse de una Fibrilación Auricular.</li>
+                    <li>Intervalo <code>PP</code> útil medir para diagnósticos de bloqueos en el Nodo AV.</li>
+                </ul>
+
+                <div col="1/3">
+                    <card>
+                        <img src="images/medidas.jpg">
+                        <p>Intervaos</p>
+                    </card>
+                </div>
+
+                <hr id="basics">
+                <h3 col="1/1">Sistema de Conducción del Corazón</h3>
+
+                <ul col="2/3">
+                    <li>En el ser humano, la actividad eléctricas del corazón comienzan en Nodo Sinusal [NS], luego se transmite hacia el Nodo Aurículo Ventricular [Nodo AV], que hace que el centro de control de los envíos pase por el haz de His y luego se divida en las ramas derecha / izquierda, que luego se extienden hacia las fibras de Purkinje.</li>
+                </ul>
+
+                <div mt="2" txt="c" col="1/3">
+                    <card>
+                        <a xx class="box" href="images/conduction.jpg"><img src="images/conduction.jpg"></a>
+                        <p>Sistemna de Conducción</p>
+                    </card>
+                </div>
+
+                <hr id="bbb">
+                <h3 col="1/1">Diagnósitos<br>Bloqueos de Rama</h3>
+
+                <ul col="2/3">
+                    <li>Se presenta cuando el <code>QRS</code> es mayor a 120 milisegundos</li>
+                    <li>Mirando la forma del <code>QRS</code> y de la onda <code>T</code> en el electrodo <code>V1</code> y <code>V6</code> Es posible diferenciar entre uno y otro.</li>
+                    <li>Si el <code>QRS</code> es mayor 120 milisegundos y la <code>R</code> es positiva + <code>T</code> positiva en <code>V1</code> se trata de un Bloqueo Completo de Rama Derecha. Si esos cambios ocurren en <code>V6</code> se trata de un Bloqueo Completo de Rama Izquierda.</li>
+                    <li>La importancia en la detección de BCRI es en el Infarto Agudo de Miocardio</li>
+                </ul>
+
+                <div mb="0" txt="c" col="1/3">
+                    <card>
+                        <img src="images/bbb.jpg">
+                        <p>QRS > 120 milisegundos + R Positivo + T Negativo</p>
+                    </card>
+                    <card>
+                        <img src="images/bbb2.jpg">
+                        <p>QRS > 120 milisegundos + R Negativo + T positivo</p>
+                </div>
+                </card>
+            </div>
+
+            <hr>
+            <h3 col="1/1">Diagnóstico<br>Infarto de Miocardio</h3>
+
+            <ul col="1/1">
+                <li>El infarto de miocardio es la principal causa de muerte en Argentina y en el mundo</li>
+                <li>Debido a que su diagnóstico generalmente depende de la capacidad de reconocer los síntomas, además de los cambios en el ECG y los marcadores cardiológicos, cada médico debe ser capaz de reconocer cambios en el ECG.
+                El Infarto de Miocardio se divide en dos tipos. El primero está acompañado por una elevación del segmento <code>S-T</code> llamado IAMCEST o Infarto de Miocardio con Elevación del Segmento <code>ST</code> la otra forma es Sin elevación del segmento <code>T</code> se llama Infarto Agudo de Miocardio Sin Elevación del Segmento ST.</li>
+            </ul>
+            <div col="1/1">
+                <table>
+                    <tr txt="c">
+                        <th>IAMCEST</th>
+                        <th>IAMSEST</th>
+                    </tr>
+                    <tr txt="c">
+                        <td>Oclusión total de la arteria coronaria</td>
+                        <td>Oclusión parcial de la arteria coronaria</td>
+                    </tr>
+                    <tr txt="c">
+                        <td><img height="200" width="200" src="images/iamcest.jpg"></td>
+                        <td><img height="200" width="200" src="images/iamsest.jpg"></td>
+                    </tr>
+                    <tr txt="c">
+                        <td>Supra Desnivel del <code>ST</code></td>
+                        <td>Infra Desnivel del <code>ST</code></td>
+                    </tr>
+                    <tr txt="c">
+                        <td>Aumento de los marcadores cardiológicos</td>
+                        <td>Aumento de los marcadores cardiológicos</td>
+                    </tr>
+                </table>
+            </div>
+            <hr id="stemi">
+            <h3 col="1/1">IAMCEST</h3>
+
+            <ul col="2/3">
+                <li>هنالك بعض الأمور يجب معرفتها :
+                    <ul>
+                        <li>في الشخص الطبيعي قد يلاحظ ارتفاعاً في <code>ST</code> في الالكترود <code>V2-V3</code>
+                            بمقدار لا يزيد عن ١-٢ مم.</li>
+                        <li>لكي نستطيع أن نطلق على هذا الارتفاع في ال <code>ST</code> ارتفاعاً باثولوجي , أي أنه قد يدل
+                            على المرض , يجب أن يكون الارتفاع في الكترودين متتاليين في التخطيط.</li>
+                        <li>الالكترودات في التخطيط مقسمة على مناطق تدل على المنطقة المأخوذ منها قراءة التخطيط. كمثال
+                            <code>II, III, AVF</code> تدلنا على المنطقة السفلى من القلب inferior ووجود ارتفاع <code>ST</code>
+                            هنالك يدل على وجود احتشاء في هذه المنطقة.</li>
+                        <li>يصاحب في اغلب الاحيان أي ارتفاع في منطقة <code>ST</code> انخفاضاً في ال <code>ST</code> في
+                            المنطقة المقابلة لهذا الالكترود.</li>
+                        <li>وجود Bundle branch block حديث لم يكن موجودا في تخطيط سابق إضافة إلى الأعراض يرجح بشدة وجود
+                            انسداد في الشريان المغذي لهذه المنطقة. في معظم الأحيان يكون الشريان المعني هو LAD.</li>
+                        <li>مقارنة أي تخطيط قديم جدا مهمة. بهذه الطريقة يمكنك اكتشاف أي تغير طرأ على التخطيط.</li>
+                    </ul>
+                </li>
+                <li>ال <code>J point</code> هي نقطة التقاء ال <code>QRS</code> بخط ال <code>ST</code>. في تشخيص حالات
+                    الاحتشاء نقوم باستخدام ال <code>J point</code> كمقياس لمدى ارتفاع <code>ST</code> و نقوم بمقارنتها
+                    بخط الاستواء الكهربي Isoelectrical line الذي يكون بالعادة في نفس مستوى مسافة <code>T-P</code>.</li>
+                <li>يمكن أيضا استخدام نقطة بداية موجة <code>Q</code> كمقياس لخط الاستواء الكهربي.</li>
+                <li>في ما عدا <code>V2 , V3</code>، أي ارتفاع في ال <code>ST</code> يزيد عن ١ مم في الكترودين متتاليين
+                    أو أكثر يرجح الكفة لتشخيص الاحتشاء القلبي.</li>
+                <li>بالنسبة ل <code>V2 , V3</code> بارتفاع يزيد عن ٢ مم (١,٥ مم في الإناث) يعتبر باثولوجي أن وجد في
+                    الكترودين متتاليين أو أكثر. بالنسبة للبالغين الذكور دون ٤٠ سنة فالحد هنا هو ٢,٥ مم</li>
+                <li>الانخفاض في <code>ST</code> في الالكترودين <code>V1 , V2</code> قد يكون دلالة على ارتفاع في ال
+                    <code>ST</code> في المنطقة الخلفية للقلب حيث لا نقوم بالعادة بقياس التخطيط من تلك المنطقة. في هذه
+                    الحالة يحبذ أخذ تخطيط خلفي أيضا بالكترودين أو ثلاثة لاستبعاد احتمالية وجود احتشاء في تلك المنطقة.</li>
+                <li>وجود موجة <code>Q</code> في التخطيط بعمق أكبر من 2 مم او بعمق أكبر من ٢٥% من ارتفاع <code>QRS</code>
+                    يدل على وجود احتشاء قديم خصوصا أن تمت ملاحظته في موضعين متتاليين في التخطيط. لكن وجودها في تخطيط
+                    إضافة إلى وجود ارتفاع في ال <code>ST</code> يرجح بشدة وجود احتشاء جديد إضافة انه يزيد من خطورة
+                    Prognosis للمرض.</li>
+                <li>تواجد انخفاض في ال <code>ST</code> في اغلب أجزاء التخطيط مع وجود الأعراض يرجح وجود انسداد في أكثر
+                    من شريان تاجي.</li>
+                <li>توجد هنالك بعض الصور و الأنماط الغير معتادة لتشخيص ال STEMI لعل من أشهرها ولين Wellen و علامة دي
+                    ونتر De Winter's sign.</li>
+            </ul>
+
+            <div txt="c" col="1/3">
+                <card>
+                    <img src="images/stemi.jpg">
+                    <p>ST segment elevation</p>
+                </card>
+            </div>
+            <hr id="winter">
+            <h3 col="1/1">علامة دي ونتر <br>De Winter's T wave</h3>
+
+            <ul col="2/3">
+                <li>نمط دي ونتر هو نمط يظهر على التخطيط و يدل على وجود احتشاء في المنطقة الامامية Anterior من القلب
+                    بدون وجود اي ارتفاع في منطقة ال <code>ST</code>.</li>
+                <li>تمت ملاحظة هذا النمط في ٢% من الانسداد الكلي للشريان التاجي LAD.</li>
+                <li>في هذا النمط يلاحظ انخفاض في <code>ST</code> اضافة الى موجة <code>T</code> مرتفعة مقارنة بال <code>QRS</code>
+                    .</li>
+                <li>أهمية التعرف على هذا النمط على الرغم من ندرة حدوثه هي التعرف على حالات ال STEMI و معالجتها في أسرع
+                    وقت ممكن.</li>
+            </ul>
+
+            <div txt="c" col="1/3">
+                <card>
+                    <img src="images/dewinter.jpg">
+                    <p>نمط دي وينتر في الانسداد الكامل للشريان LAD</p>
+                </card>
+            </div>
+            <hr id="wellen">
+            <h3 col="1/1">علامة ويلن <br>Wellen sign</h3>
+
+            <ul col="2/3">
+                <li>هي إحدى دلالات وجود انسداد في الشريان التاجي الأيسر LAD.</li>
+                <li>يلاحظ في التخطيط وجود موجة <code>T</code> سالبة عميقة في الالكترودين <code>V1, V2</code> . او تكون
+                    موجة <code>T</code> موجبة في بدايتها و سالبة في نهايتها اضافة لكونها عميقة.</li>
+                <li>أهمية التعرف على هذا النمط على الرغم من ندرة حدوثه هي التعرف على حالات ال STEMI و معالجتها في أسرع
+                    وقت ممكن.</li>
+
+            </ul>
+
+            <div txt="c" col="1/3">
+                <card>
+                    <img src="images/wellen1.jpg">
+                    <p>النمط الأول من علامة ويلن حيث يلاحظ موجة T عميقة</p>
+                </card>
+                <card>
+                    <img src="images/wellen2.jpg">
+                    <p>النمط الثاني من علامة ويلن حيث يلاحظ موجة T تكون في بداياتها موجبة ثم سالبة</p>
+            </div>
+            </card>
+            </div>
+            <hr id="sgarbossa">
+            <h3 col="1/1">قاعدة سكاربوسا <br>Sgarbossa</h3>
+
+            <ul col="1/1">
+                <li>قاعدة سكاربوسا هي مجموعة من النقاط التي يمكن اتباعها لتسهيل تشخيص احتشاء عضلة القلب في المرضى الذين
+                    لديهم Bundle branch block في تخطيطهم أو تم تركيب منظم لضربات القلب لديهم. </li>
+                <li>الذي يصعب تشخيص احتشاء عضلة القلب لدى هذه الفئة من المرضى وجود موجة <code>T</code> اللتي تكون سالبة
+                    لديهم في بعض أجزاء التخطيط مع نوع من الارتفاع أو الانخفاض في منطقة <code>ST</code> مما يجعل تشخيص
+                    الارتفاع أو الانخفاض في هذه المنطقة صعبا. </li>
+                <li>قاعدة سكاربوسا مبنية على فكرة :
+                    <ul>
+                        <li>إذا كانت ال <code>QRS</code> موجبة و ارتفعت ال <code>ST</code> عند نقطة <code>J</code> أكثر
+                            من ١ مم </li>
+                        <li>أو إذا كانت ال <code>QRS</code> سالبة و انخفضت ال <code>ST</code> عند ال <code>J</code>
+                            بأكثر من ١ مم</li>
+                        <li>أو عند وجود اختلاف كبير بين <code>QRS</code> موجبة و <code>ST</code> سالبة و بالعكس أكثر من
+                            ٥ مم. </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr id="nstemi">
+            <h3 col="1/1">NSTEMI</h3>
+
+            <ul col="2/3">
+                <li>في هذا النوع من الاحتشاء يلاحظ اما انخفاض في منطقة ال <code>ST</code> عند نقطة <code>J</code> أو
+                    موجة <code>T</code> سالبة في أكثر من موضع في التخطيط. </li>
+                <li>كما في ال STEMI يستدعي التشخيص وجود هذه التغيرات في الكترودين متتاليين على الأقل في التخطيط. </li>
+                <li>على خلاف ال STEMI التدخل الطبي لايزال مهما وواجباً لكن خلال ٤٨ ساعة. </li>
+                <li>في حالات ال NSTEMI، يصيب الاحتشاء جزءا من قطر عضلة القلب subendocardial على غرار ال STEMI حيث يصيب
+                    الاحتشاء قطر عضلة القلب كلها في الجزء المعني. Transmural. </li>
+            </ul>
+
+            <div col="1/3">
+                <card txt="c">
+                    <img src="images/nstemi.jpg">
+                    <p>ST segment depression</p>
+                </card>
+            </div>
+            <hr id="pericarditis">
+            <h3 col="1/1">التهاب غشاء عضلة القلب <br>Pericarditis</h3>
+
+            <ul col="2/3">
+                <li>غشاء عضلة القلب Pericardium هو غشاء يحيط بالقلب يحتوي على قليل من السوائل. هذا الغشاء معرض الالتهاب
+                    الفيروسي خصوصا اذا كان المريض قد أصيب بالتهاب فيروس كالرشح و الزكام في فترة قريبة. </li>
+                <li>إذا كان التهاب غشاء عضلة القلب مقتصر على الغشاء فقط فهو في اغلب الاوقات غير خطير و علاجه يتم بشكل
+                    عام بمخفضات للالتهاب NSAID. </li>
+                <li>يشتكي المريض في العادة من آلام في الصدر تزداد حال أخذ نفس عميق وأثناء تحريك القفص الصدري. </li>
+                <li>العلامة المميزة فى التخطيط هي ارتفاع في ال <code>ST</code> في كل أجزاء التخطيط. </li>
+                <li>شكل ارتفاع ال <code>ST</code> مميز أيضا حيث يمكن تشبيهه بحبل ممسوك من طرفيه و تم ارخائه قليلاً.
+                </li>
+                <li>يصاحب هذا النوع من التغيرات انخفاض في مسافة <code>PR</code> يلاحظ في بعض المرضى.</li>
+                <li>يجب التأكد من عدم ارتفاع انزيمات القلب قبل الجزم بالتشخيص.</li>
+                <li>في بعض الأحيان يصاحب التهاب غشاء القلب زيادة مقدار السوائل في الغشاء. يمكن مشاهدتها في الايكو كما
+                    يمكن ملاحظته في التخطيط عن طريق تفاوت في أطوال موجات <code>R</code>. تعرف هذه الظاهرة ب Electrical
+                    alternans. </li>
+            </ul>
+
+            <div txt="c" col="1/3">
+                <card>
+                    <img src="images/pericarditis.jpg">
+                    <p>الشكل المميز لتخطيط التهاب غشاء عضلة القلب. لاحظ شكل الحبل المرخي المشار اليه بالسهم</p>
+                </card>
+            </div>
+            <hr id="myocarditis">
+            <h3 col="1/1">التهاب عضلة القلب <br>Myocarditis</h3>
+
+            <ul col="1/1">
+                <li>هو التهاب في اغلب الاحيان يكون سببه فيروسي يصيب عضلة القلب. </li>
+                <li>أعراضه تكون مشابهة لأعراض التهاب غشاء القلب إضافة لبعض أعراض ضعف عضلة القلب كالتعب و تجمع السوائل
+                    في القدمين و نحوه. </li>
+                <li>قد يصاحب التهاب عضلة القلب أيضا التهاب في غشاء القلب و حينها تكون علامته مشابهة في التخطيط. </li>
+                <li>لا توجد علامة مميزة لالتهاب عضلة القلب في التخطيط بشكل عام. من الممكن ملاحظة تسارع في نبضات القلب،
+                    موجة <code>T</code> سالبة في اغلب أجزاء التخطيط. </li>
+                <li>كما ذكرت قد يصاحب الالتهاب ضعف في عضلة القلب لذا يحبذ تنويم المريض و عمل ايكو للمريض. </li>
+            </ul>
+            <hr id="afib">
+            <h3 col="1/1">الرجفان الأذيني <br>Atrial Fibrillation</h3>
+
+            <ul col="1/1">
+                <li>يعتبر الرجفان الأذيني أكثر أنواع الإضطرابات الكهربائية شيوعاً. </li>
+                <li>خطورته تكمن في زيادة احتمالية تجلط الدم في الأذين الايسر مكوناً خثرة قد تنتقل بدورها في مجرى الدم
+                    صعودا للدماغ مسببتاً جلطة في الدماغ. </li>
+                <li>لهذا السبب يتم وصف مسيلات الدم اما من نوع NOAC أو Warfarin. الأسبرين لوحده لا يحمي من تكون الخثرات
+                    في الاذين. </li>
+                <li>مصطلح ال Reentry هو مصطلح يستخدم في كهربيات القلب مفاده أنها نقاط تقوم الشحنة الكهربية بالدوران
+                    حولها عوضاً عن انتقالها لأجزاء أخرى من القلب. </li>
+                <li>فى الرجفان الأذيني توجد عدة فرضيات عن آلية المرض لكن من أشهرها هي وجود عدة نقاط Reentry في الأذينين
+                    تدور الشحنات حولها مؤدية إلى تفعيل متتال للأذينين من نقاط عدة بشكل عشوائي. قد يصل معدل نبضات الأذين
+                    إلى ٣٠٠ نبضة في الدقيقة لكن ال AV node تقوم بإيقاف اغلب الشحنات عن الانتقال للبطين. </li>
+                <li>في التخطيط يتم التعرف على الرجفان الأذيني عن طريق عدة نقاط:
+                    <ul>
+                        <li>تسارع في نبضات القلب (قد يكون المعدل طبيعياً ان كان المريض يستخدم Beta blockers كعلاج).
+                        </li>
+                        <li>انعدام وجود موجات <code>P</code> في التخطيط. </li>
+                        <li>وجود عدم تساوٍ في مسافات <code>RR</code> بين كل نبضة و أخرى (Irregularly irregular). </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div txt="c" col="1/1">
+                <card>
+                    <img src="images/afib.jpg">
+                    <p>الرجفان الأذيني. لاحظ عدم وجود موجة P اضافة لعدم تساوي المسافات بين كل QRS.</p>
+                </card>
+            </div>
+            <hr id="aflutt">
+            <h3 col="1/1">الرفرفة الأذينية <br>Atrial Flutter</h3>
+
+            <ul col="1/1">
+                <li>الرفرفة الأذينية هي اضطراب كهربائي يحصل في الأذين بشكل عام . الشحنة الكهربية تدور بشكل متتال حول
+                    الأذين و الشحنات تتحرك بشكل متتال و متسارع نحو ال AV node .</li>
+                <li>تحرك الشحنات الكهربية اما يكون مع او عكس عقارب الساعة و يمكن ملاحظة ذلك في التخطيط.</li>
+                <li>في التخطيط يمكن ملاحظة علامة مميزة و هي وجود موجات بين كل <code>QRS</code> تشبه في شكلها اسنان
+                    المنشار. إذا كانت أسنان المنشار متجهة للاسفل في الالكترودات السفلية من التخطيط أي <code>II ,III, AVF</code>
+                    فيكون نوع الرفرفة الاذينية عكس عقارب الساعة Counter clockwise و العكس صحيح.</li>
+                <li>مثل الرجفان الاذيني تزيد الرفرفة الاذينية من احتمالية الاصابة بجلطات الدماغ.</li>
+            </ul>
+
+            <div txt="c" col="1/1">
+                <card>
+                    <img src="images/aflutter.jpg">
+                    <p>الرفرفة الأذينية. لاحظ شكل أسنان المنشار بين كل QRS.</p>
+                </card>
+            </div>
+            <hr id="sinus">
+            <h3 col="1/1">Sinus tachycardia</h3>
+
+            <ul col="1/1">
+                <li>هذا التسارع في نبضات القلب مصدره ال SA node . الجهد بشكل عام يزيد من سرعة نبضات القلب حتى يغطي حاجة
+                    الجسم .</li>
+                <li>ايضا من الاسباب التي قد تؤدي لتسارع نبضات القلب الآلام والالتهابات بأنواعها.</li>
+                <li>يمكنك ملاحظة موجة <code>P</code> قبل كل <code>QRS</code> . كلما زادت سرعة معدل ضربات القلب صعبت
+                    ملاحظة ال <code>P</code> حيث انها قد تكون مختفية تحت موجة <code>T</code>.</li>
+                <li>إضافة لما سبق تكون المسافات بين كل <code>R-R</code> متساوية.</li>
+                <li>في بعض الحالات عند عدم امكانية ملاحظة ال <code>P</code> و حتى يتم التفريق ما بين Sinus tachycardia
+                    وغيرها من الاضطرابات الكهربية يمكن عمل نوع خاص من التخطيط يعرف بالتخطيط القلبي البلعومي Esophageal
+                    ECG لمعرفة موضع موجة <code>P</code> .</li>
+            </ul>
+
+            <div txt="c" col="1/1">
+                <card>
+                    <img src="images/sinustacky.jpg">
+                    <p>من الممكن ملاحظ موجة ال P بعد كل موجة T.</p>
+                </card>
+            </div>
+            <hr id="atrial">
+            <h3 col="1/1">تسارع نبضات القلب الأذيني <br>Atrial tachycardia</h3>
+
+            <ul col="2/3">
+                <li>في هذا النوع من الاضطرابات الكهربائية يكون مصدر نبضات الاذين من الأذين نفسه و هو مصدر دخيل على الSA
+                    node .</li>
+                <li>كون هذا المصدر مصدرا دخيلاً يؤدي إلى تغير شكل موجة <code>P</code> مقارنة بالموجات الطبيعية الصادرة
+                    من SA node.</li>
+                <li>بما ان مصدر هذه الشحنات هو الأذين و في غياب وجود أي Bundle branch block في التخطيط يفترض أن تكون ال
+                    <code>QRS</code> بعرض طبيعي أي أقل من ١٢٠ ملي ثانية.</li>
+                <li>كمثال، ان تمت ملاحظة <code>P</code> سالبة في كل أجزاء التخطيط و صاحب هذا التغير تسارعاً في ضربات
+                    القلب اذا نستنتج ان مصدرها هو من الاذين.</li>
+            </ul>
+
+            <div txt="c" col="1/3">
+                <card>
+                    <img src="images/atachy.jpg">
+                    <p>وجود موجة P غريبة الشكل في نظم متسارع مقارنة بموجات P الاخرى في النظم الطبيعي في نفس التخطيط
+                        يرجح التشخيص.</p>
+                </card>
+            </div>
+            <hr id="avnrt">
+            <h3 col="1/1">Atrioventricular nodal re-entrant tachycardia AVNRT</h3>
+
+            <ul col="2/3">
+                <li>هذا النوع من الاضطرابات الكهربية يحدث حول ال AV node .</li>
+                <li>في قلب المريض يوجد مسارين حول ال AV node أحدهما يتميز بسرعة نقله للشحنات لكن مدة Refractory period
+                    طويلة، مما يعني أنه بعد نقله للشحنة يحتاج المسار لوقت أطول حتى يستعيد قدرته على نقل الشحنات و في
+                    اثناء هذا الوقت لا يمكنه نقل اي شحنات. أما المسار الآخر فينقل الشحنات بسرعة بطيئة مقارنة بالمسار
+                    الأول لكنه يستعيد قدرته على نقل الشحنات بسرعة أسرع من المسار الأول .</li>
+                <li>في اغلب الاوقات عند هذا المريض تنتقل الشحنات عبر المسار السريع و البطيء معا، لكن الشحنات في المسار
+                    السريع ترجع عبر المسار القديم و توقف الشحنة المنقولة من المسار البطيء تقدم الشحنات المنقولة من
+                    المسار السريع للبطئ فيما تستمر الشحنة مسارها للبطين.</li>
+                <li>عند حدوث أي نبضة زائدة من الأذين PSVC و تليها نبضه طبيعة تأتي النبضة الثانية لتجد أن المسار السريع
+                    غير شاغر لكونه في فترة ال Refractory فيما يكون المسار البطيء شاغرا و عندما تصل الشحنة لنقطة
+                    الالتقاء بين المسار السريع و البطيء تقوم الشحنة بالدوران للاعلى عبر المسار السريع حيث يكون قد أصبح
+                    شاغرا وقتها و تستمر بالدوران عبر المسار البطئ و هلم جرا لتكون حلقة مستمرة مفعلة كلا الأذين و البطين
+                    مكونة تسارعاً ملحوظاً في نبضات القلب.</li>
+                <li>هذا الدوران يؤدي أن الشحنات تدور مفعلة كل من الأذين و البطين . تفعيل الاذين كونه يأتي بعد تفعيل
+                    البطين يكون موجة <code>P</code> يمكن مشاهدتها بعد ال <code>QRS</code> .</li>
+                <li>يصعب في بعض الاحيان مشاهدة موجة <code>P</code> بعد ال <code>QRS</code> لذا ينبغى في بعض الاحيان عمل
+                    تخطيط قلبي بلعومي للتأكد من مكان ال <code>P</code> بعد ال <code>QRS</code>.</li>
+            </ul>
+
+            <div txt="c" col="1/3">
+                <card>
+                    <img src="images/avnrt.jpg">
+                    <p>لاحظ وجود نتوء سلبي بعد كل QRS.</p>
+                </card>
+            </div>
+            <hr id="junctional">
+            <h3 col="1/1">Junctional rhythm</h3>
+
+            <ul col="1/1">
+                <li>يكون مصدر هذا النوع من نظم نبضات القلب، الخلايا حول ال AV node قبل التفرع لكل من البطينين عن طريق
+                    ال Bundle branches ؛ لذلك تكون ال <code>QRS</code> اقل من ١٢٠ ملي ثانية.</li>
+                <li>هذا النوع من النظم غير طبيعي وبشكل عام يبدأ في الظهور إذا فشلت خلايا الاذين بما فيها خلايا ال SA
+                    node في عملها كمنظم لضربات القلب . اقرأ أيضا أساسيات كهربائية القلب.</li>
+                <li>أسباب هذا النظم عديدة . اذا ما اخذنا في الاعتبار آلية عمله اذاً أي عرض ينتج عنه بطء في معدل ضربات
+                    القلب قد يسبب هذا النظم.</li>
+                <li>أحد أشهر الامثلة هي وجود 3rd degree AV Block و هذا النمط في التخطيط. يمكن معرفته من خلال وجود <code>QRS</code>
+                    طبيعية العرض اضافة لعدم وجودة اي علاقة ما بين موجات <code>P</code> و <code>QRS</code> في التخطيط .</li>
+            </ul>
+
+            <div txt="c" col="1/1">
+                <card>
+                    <img src="images/junctional.jpg">
+                    <p>نمط junctional في حالة 3rd degree AV Block. لاحظ عدم وجود علاقة ما بين موجات P و QRS.</p>
+                </card>
+            </div>
+            <hr id="ventricular">
+            <h3 col="1/1">Ventricular rhythm</h3>
+
+            <ul col="1/1">
+                <li>يكون مصدر هذا النوع من نظم نبضات القلب خلايا أحد البطينين ؛ لذلك تكون ال <code>QRS</code> اكبر من
+                    ١٢٠ ملي ثانية.</li>
+                <li>هذا النوع من النظم غير طبيعي وبشكل عام يبدأ في الظهور إذا فشلت خلايا الاذين بما فيها خلايا ال SA
+                    node في عملها كمنظم لضربات القلب إضافة لفشل الخلايا حول ال AV node قبل التفرع لل Bundle branches .
+                    اقرأ أيضا أساسيات كهربائية القلب.</li>
+                <li>أسباب هذا النظم عديدة . اذا ما اخذنا في الاعتبار آلية عمله اذاً اي عرض ينتج عنه بطء في معدل ضربات
+                    القلب قد يسبب هذا النظم.</li>
+                <li>أحد أشهر الامثلة هي وجود 3rd degree AV Block و هذا النمط في التخطيط. يمكن معرفته من خلال وجود <code>QRS</code>
+                    اكبر من ١٢٠ مم اضافة لعدم وجودة اي علاقة ما بين موجات <code>P</code> و <code>QRS</code> في التخطيط
+                    .</li>
+            </ul>
+
+            <div txt="c" col="1/1">
+                <card>
+                    <img src="images/ventricular.jpg">
+                    <p>نمط ventricular في حالة 3rd degree AV Block. لاحظ عدم وجود علاقة ما بين موجات P و QRS.</p>
+                </card>
+            </div>
+            <hr id="psvc">
+            <h3 col="1/1">النبضة الأذينية الزائدة <br>Premature supraventricular contraction PSVC</h3>
+
+            <ul col="1/1">
+                <li>هي نبضة دخيلة على النظم الطبيعي للقلب تنشأ من أحد خلايا الاذينين لسبب من الأسباب.</li>
+                <li>بما أن النبضة نتجت من أحد خلايا الاذين إذا وبغياب أي Bundle branch block معروف لدى المريض فمن
+                    المفترض ان تكون ال <code>QRS</code> طبيعية و غير عريضة أي اقل من ١٢٠ ملي ثانية.</li>
+                <li>في بعض الاوقات اذا صادف أن وقت هذه النبضة حصل في منتصف موجة <code>T</code> في النبضة السابقة قد
+                    يحصل هناك توقف عن ارسال الشحنات في المسار الأيمن Right bundle branch بسبب انها لا تزال في ال
+                    Refractory Period و ينتج ان يكون شكل ال <code>QRS</code> اعرض من الطبيعي بشكل RBBB.</li>
+                <li>اذا صادف أن وقت هذه النبضة حصل قبل منتصف موجة <code>T</code> في النبضة السابقة قد يحصل هناك توقف عن
+                    ارسال الشحنات في كلا المسارين Right /left bundle branches مما يؤدي لعدم مرور النبضة للبطين، و ينتج
+                    أن يكون فيما بعدها توقف لحظي عن ارسال الشحنات .</li>
+                <li>هذا النوع من الاضطرابات الكهربية غير خطير في اغلب الاحيان و من اشهر اسبابه التوتر و الكافيين.</li>
+            </ul>
+
+            <div txt="c" col="1/1">
+                <card>
+                    <img src="images/pac.jpg">
+                    <p>نبضة أذينية زائدة. لاحظ وجود موجة P قبل النبضة الزائدة والتي قد يكون شكلها مختلفا عن موجة P
+                        الطبيعية.</p>
+                </card>
+            </div>
+            <hr id="pvc">
+            <h3 col="1/1">النبضة البطينية الزائدة <br>Premature ventricular contraction PVC</h3>
+
+            <ul col="1/1">
+                <li>هي نبضة دخيلة على النظم الطبيعي للقلب تنشأ من أحد خلايا البطينين .</li>
+                <li>بما أن النبضة نتجت من أحد خلايا البطينين فمن المفترض ان تكون ال <code>QRS</code> عريضة أي اكبر من
+                    ١٢٠ مم.</li>
+                <li>في بعض الاوقات اذا صادف أن وقت هذه النبضة حصل في نفس وقت نبضة طبيعية من الاذين قد يحصل هناك توقف عن
+                    ارسال الشحنات من الأذين للبطين بسبب ان خلايا البطين اضافة لخلايا كلا ال bundles لا تزال في ال
+                    Refractory Period و ينتج أن يكون فيما بعدها توقف لحظي عن ارسال الشحنات. تعرف هذه الظاهرة بال
+                    Compensatory pause.</li>
+                <li>هذا النوع من الاضطرابات الكهربية غير خطير في أغلب الاحيان ، لكن ان تكرر حدوثه و كثرت ملاحظته في
+                    التخطيط اضافة لوجود آلام في الصدر وجب عمل فحوصات أخرى للتأكد من أنه لا يوجد انسداد في أحد الشرايين
+                    التاجية.</li>
+                <li>في حالات احتشاء القلب ، إذا لم يتم معالجته قد يلاحظ وجود العديد من هذه النبضات قد تنتهي بتحولها الى
+                    رجفان بطيني Ventricular fibrillation الذي بدوره قد يؤدي بحياة المريض لا قدر الله .</li>
+            </ul>
+
+            <div txt="c" col="1/1">
+                <card>
+                    <img src="images/pvc.jpg">
+                    <p>نبضة بطينية زائدة. لاحظ عدم وجود P قبل الQRS اضافة الى عرض مسافة QRS مقارنة بالطبيعة.</p>
+                </card>
+            </div>
+            <hr id="vt">
+            <h3 col="1/1">Ventricular tachycardia</h3>
+
+            <ul col="1/1">
+                <li>هي تسارع لنبضات القلب مصدرها أحد البطينين. هذا التسارع خطير حيث انه قد يتطور إلى رجفان بطيني
+                    Ventricular Fibrillation. </li>
+                <li>يمكن إطلاق الاسم على اي ٣ نبضات بطينية متتالية او أكثر بسرعة اكبر من ١٣٠ نبضة بالدقيقة.</li>
+                <li>إذا استمر هذا الاضطراب لمدة تقل عن ٣٠ ثانية يطلق عليه Non sustained VT ، أما اذا استمر اكثر من ٣٠
+                    ثانية فيطلق عليه Sustained VT.</li>
+                <li>أسبابه عديدة لعل من أهمها احتشاء عضلة القلب و ضعف عضلة القلب. </li>
+                <li>بما ان الشحنة صادرة من أحد البطينين إذاً عرض ال <code>QRS</code> يكون أكبر من ١٢٠ ملي ثانية. </li>
+                <li>يوجد هناك نوعان من ال Ventricular tachycardia مقسمة حسب مصدر الاضطراب:
+                    <ul>
+                        <li>اضطراب بطيني صادر من مصدر واحد Monomorphic وهو الأكثر شيوعا ، من أسبابه احتشاء عضلة القلب,</li>
+                        <li>اضطراب صادر من أكثر من مصدر في البطينين Polymorphic من أشهرها هي Torsades de pointes.</li>
+                    </ul>
+                </li>
+                <li>التعرف على هذا النوع من الاضطرابات الكهربائية مهم جدا.</li>
+            </ul>
+
+            <div txt="c" col="1/1">
+                <card>
+                    <img src="images/vt.jpg">
+                </card>
+            </div>
+            <hr id="vf">
+            <h3 col="1/1">Ventricular fibrillation</h3>
+
+            <ul col="1/1">
+                <li>الرجفان البطيني هو اضطراب كهربائي يحصل في البطينين. يتوقف القلب عن الخفقان و عوضا عن ذلك يرجف بصورة
+                    عشوائية. </li>
+                <li>لا يمكن مشاهدة اي <code>QRS</code> في التخطيط. </li>
+                <li>استخدام الصاعق الكهربي واجب Cardiac defibrillator لارجاع النظم الطبيعي للقلب. </li>
+            </ul>
+
+            <div txt="c" col="1/1">
+                <card>
+                    <img src="images/vf.jpg">
+                </card>
+            </div>
+            </div>
+        </grid>
+    </section>
+
+    <footer id="footer">
+        <grid>
+            <div col="1/1" fs="xs" txt="c">
+                <p style="margin-bottom: 0rem;">للاسئلة و الاستفسارات</p>
+                <p style="margin-bottom: 1rem;">contact@ecg.tips</p>
+                <div><a href="https://twitter.com/ajmandourah?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+                        data-show-count="false">Follow @ajmandourah</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+
+            <div txt="c" col="1/1">
+                <p xx fs="xs" class="copyright" style="margin-bottom: 0rem;"></p>
+                <p fs="xs">Anmar Mandourah : ECG.tips</p>
+            </div>
+        </grid>
+    </footer>
+
+    <!-- scripts -->
+    <script>
+        $(document).ready(function () {
+            /*
+            var template
+            tippy('.popup', {
+                    content: template,
+                    arrow: true,
+                    delay: 100,
+                    size: "large",
+                    trigger: 'click',
+                    theme: 'light-border'
+                    });
+            $('.popup').click(function(){
+                template = '<div id="popupcard"><img src="' + $(this).attr("image") + '" id="popimg"></div>';
+                this._tippy.setContent(template);
+            });
+            */
+
+            // $('.box').magnificPopup({
+            //     type: 'image',
+            //     mainClass: 'mfp-with-zoom',
+            //     zoom: {
+            //         enabled: true, // By default it's false, so don't forget to enable it
+
+            //         duration: 300, // duration of the effect, in milliseconds
+            //         easing: 'ease-in-out', // CSS transition easing function
+            //         opener: function (openerElement) {
+            //             return openerElement.is('img') ? openerElement : openerElement.find('img');
+            //         }
+            //     }
+
+            // });
+
+
+            var d = new Date();
+            $('.copyright').html(" جميع الحقوق محفوظة " + d.getFullYear() + "©");
+
+            //hide tweet button
+            if ($(window).width() < 770) {
+                $('#tweet').hide();
+            }
+            else {
+                $('#tweet').show();
+            }
+
+        });
+
+    //ToDo: AnchorScroll, jsPDF
+
+    </script>
+
+</body>
+
+</html>
