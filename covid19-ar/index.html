@@ -1,1 +1,205 @@
-poner aca
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coronavirus - Covid19BOT - Reportes</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        background-color: #171d23;
+      }
+      #wrap {
+        width: 450px;
+        background-image: url(images/bg.jpg);
+      }
+
+      @media (max-width: 768px) {
+        #wrap {
+          width: 100%;
+        }
+      }
+      .infoGeneral {
+        text-align: center;
+        padding-top: 15px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      .infoGeneral h3 {
+        color: rgba(49, 161, 243, 1);
+        font-size: 35px;
+        text-shadow: 0px 0px 20px rgba(49, 161, 243, 0.25);
+        margin-bottom: 0;
+        font-weight: 500;
+      }
+      .infoGeneral div {
+        font-size: 13px;
+        font-weight: 500;
+        opacity: 0.9;
+        color: #fff;
+      }
+      .source {
+        color: rgba(49, 161, 243, 1);
+        padding-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="container">
+        <div class="row infoGeneral">
+          <div class="col">
+            <h3 id="confirmed"></h3>
+            <div>Confirmados</div>
+            <div>+<span id="variacion">15</span>% <small>En 24hs</small></div>
+          </div>
+          <div class="col">
+            <h3 id="recovered"></h3>
+            <div>Recuperados</div>
+          </div>
+          <div class="col">
+            <h3 id="deaths"></h3>
+            <div>Fallecidos</div>
+          </div>
+        </div>
+        <canvas id="myChart" width="400px" height="400px"></canvas>
+        <div class="row mt-3 source">
+          <div class="col">
+            <small><strong>Fuente</strong> : OMS</small>
+          </div>
+          <strong class="col text-right">@covidbot19</strong>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script src="js/jquery.csv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+      moment.locale("EN");
+      var ctx = $("#myChart");
+
+      function chart() {
+        var myChart = new Chart(ctx, {
+          type: "line",
+          data: chartData,
+          options: {
+            legend: {
+              display: false
+            },
+
+            scales: {
+              yAxes: [
+                {
+                  gridLines: {
+                    color: "rgba(255,255,255,0.1)"
+                  },
+                  ticks: {
+                    fontColor: "rgba(255,255,255,0.8)",
+                    beginAtZero: true
+                  }
+                }
+              ],
+              xAxes: [
+                {
+                  gridLines: {
+                    color: "rgba(255,255,255,0.1)"
+                  },
+                  ticks: {
+                    fontColor: "rgba(255,255,255,0.8)"
+                  }
+                }
+              ]
+            }
+          }
+        });
+      }
+
+      let chartData = {
+        labels: [],
+        datasets: [
+          {
+            label: "Argentina",
+            data: [],
+            backgroundColor: [
+              "rgba(55, 60, 101, 0.2)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)"
+            ],
+            borderColor: [
+              "rgba(49, 161, 243, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)",
+              "rgba(255, 255, 255, 1)"
+            ],
+            borderWidth: 4
+          }
+        ]
+      };
+
+      $.ajax({
+        url:
+          "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-17-2020.csv",
+        async: false,
+        success: function(csvd) {
+          var items = $.csv.toObjects(csvd);
+          var jsonobject = JSON.stringify(items);
+
+          let result = items.filter(r => {
+            return r["Country/Region"] == "Argentina";
+          })[0];
+
+          $("#confirmed").html(result["Confirmed"]);
+          $("#recovered").html(result["Recovered"]);
+          $("#deaths").html(result["Deaths"]);
+        },
+        dataType: "text"
+      });
+
+      fetch("https://pomber.github.io/covid19/timeseries.json")
+        .then(response => response.json())
+        .then(response => {
+          let amount = response["Argentina"].length;
+          response["Argentina"].forEach(
+            ({ date, confirmed, recovered, deaths }, index) => {
+              if (index > amount - 10) {
+                chartData.labels.push(moment(date).format("DD-MM"));
+                chartData.datasets[0].data.push(confirmed);
+              }
+            }
+          );
+
+          chart(chartData);
+          let variacion = parseInt(
+            (response["Argentina"][amount - 1]["confirmed"] /
+              response["Argentina"][amount - 2]["confirmed"] -
+              1) *
+              100
+          );
+          $("#variacion").html(variacion);
+        });
+    </script>
+  </body>
+</html>
