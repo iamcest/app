@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coronavirus - Covid19BOT - Reportes</title>
+    <title>Covid 19 Argentina - Reportes</title>
     <meta name="viewport" content="width=device-width, user-scalable=no" />
 
     <link
@@ -161,7 +161,7 @@
 
       $.ajax({
         url:
-          "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-17-2020.csv",
+          "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-21-2020.csv",
         async: false,
         success: function(csvd) {
           var items = $.csv.toObjects(csvd);
