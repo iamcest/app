@@ -186,7 +186,7 @@
           response["Argentina"].forEach(
             ({ date, confirmed, recovered, deaths }, index) => {
               if (index > amount - 10) {
-                chartData.labels.push(moment(date).format("DD-MM"-YYYY));
+                chartData.labels.push(moment(date).format("DD-MM-YYYY"));
                 chartData.datasets[0].data.push(confirmed);
               }
             }
