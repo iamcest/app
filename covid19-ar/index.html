@@ -52,7 +52,7 @@
       }
     </style>
   </head>
-<body>
+  <body>
     <div id="wrap">
       <div class="container">
         <div class="row infoGeneral">
@@ -75,7 +75,7 @@
           <div class="col">
             <small><strong>Fuente</strong> : OMS</small>
           </div>
-          <strong class="col text-right">@iamcest</strong>
+          <strong class="col text-right">@covidbot19</strong>
         </div>
       </div>
     </div>
@@ -85,7 +85,7 @@
     <script src="js/jquery.csv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script>
-      moment.locale("ES");
+      moment.locale("EN");
       var ctx = $("#myChart");
 
       function chart() {
@@ -161,7 +161,7 @@
 
       $.ajax({
         url:
-          "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-24-2020.csv",
+          "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-17-2020.csv",
         async: false,
         success: function(csvd) {
           var items = $.csv.toObjects(csvd);
