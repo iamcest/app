@@ -161,7 +161,7 @@
 
       $.ajax({
         url:
-          "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-24-2020.csv",
+          "https://raw.githubusercontent.com/edvm/coronavirus/master/dataset.csv",
         async: false,
         success: function(csvd) {
           var items = $.csv.toObjects(csvd);
@@ -185,7 +185,7 @@
           response["Argentina"].forEach(
             ({ date, confirmed, recovered, deaths }, index) => {
               if (index > amount - 10) {
-                chartData.labels.push(moment(date).format("DD/MM"));
+                chartData.labels.push(moment(date).format("DD-MM"));
                 chartData.datasets[0].data.push(confirmed);
               }
             }
