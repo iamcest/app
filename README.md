@@ -10,3 +10,4 @@ Repositorio de Aplicaciones de utilidad en contextos de:
 - Prevención Secundaria
 
 App IAMCEST | Soluciones en Emergencias Cardiovasculares
+<a href="covid19.html">Covid19 - Ultimos reportes sobre posibles compromisos cardiovasculares</a>
