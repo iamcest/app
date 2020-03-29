@@ -15,6 +15,7 @@ App IAMCEST | Soluciones en Emergencias Cardiovasculares
 Recursos Covid19 - Enlaces
 
 - <a href="covid19.html">Covid19 - Generalidades</a><br />
+- <a href="https://iamcest.github.io/covid19-argentina/index.html" target="_blank">Covid19 - Argentina x Provincias</a><br />
 - <a href="https://app.iamcest.com/covid19-ar">Covid19 - Mi Dashboard Argento</a><br />
 - <a href="covid19-efectos-cardiovasculares.html">Covid19 - Efectos Cardiovasculares</a><br />
 - <a href="https://www.flattenthecurve.com/es/" target="_blank">Aplanar la curva</a><br />
