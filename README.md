@@ -14,6 +14,6 @@ App IAMCEST | Soluciones en Emergencias Cardiovasculares
 
 Recursos Covid19 - Enlaces
 
-<a href="covid19.html">Covid19 - Ultimos reportes sobre posibles compromisos cardiovasculares</a><br />
-<a href="https://www.flattenthecurve.com/es/" target="_blank">Aplanar la curva</a><br />
-<a href="https://gabgoh.github.io/COVID/index.html" target="_blank">Epidemic Calculator</a>
+- <a href="covid19.html">Covid19 - Ultimos reportes sobre posibles compromisos cardiovasculares</a><br />
+- <a href="https://www.flattenthecurve.com/es/" target="_blank">Aplanar la curva</a><br />
+- <a href="https://gabgoh.github.io/COVID/index.html" target="_blank">Epidemic Calculator</a>
