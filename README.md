@@ -23,3 +23,6 @@ Recursos Covid19 - Enlaces
 - <a href="https://www.cov19.xyz/" target="_blank">Dashboard Covid-19</a><br />
 - <a href="https://www.argentina.gob.ar/salud/coronavirus-COVID-19" target="_blank">Ministerio de Salud Argentina - Covid 19</a>
 - <a href="https://jamanetwork.com/journals/jamacardiology/fullarticle/2763846" target="_blank">Potential Effects of Coronaviruses on the Cardiovascular System</a>
+- <a href="https://github.com/CDCgov/covid19healthbot" target="_blank">CDC Bot Covid-19</a>
+- <a href="https://cloud.google.com/solutions/contact-center/covid19-rapid-response/" target="_blank">Google Covid-19</a>
+- <a href="https://www.eli-white.com/covid19-changes/?from=20-04-09&page=summary&to=20-04-12" target="_blank">Comparison of CDC's COVID-19 Updates</a>
