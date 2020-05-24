@@ -14,7 +14,7 @@ App IAMCEST | Soluciones en Emergencias Cardiovasculares
 
 Recursos Covid19 - Enlaces
 
-- <a ref="alta-nuevo-evento.html">Alta nuevo evento</a><br />
+- <a href="alta-nuevo-evento.html">Alta nuevo evento</a><br />
 - <a href="covid19.html">Covid19 - Generalidades</a><br />
 - <a href="https://iamcest.github.io/covid19-argentina/index.html" target="_blank">Covid19 - Argentina x Provincias</a><br />
 - <a href="https://app.iamcest.com/covid19-ar">Covid19 - Mi Dashboard Argento</a><br />
